@@ -4,6 +4,9 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
+  @extend .container-fluid;
+  max-width: var(--breakpoint-lg);
+  padding: 30px 15px;
 }
 
 .alert-notice {
@@ -12,4 +15,8 @@
 
 .alert-alert {
   @extend .alert-danger;
+}
+
+body {
+  margin-top: 60px;
 }
