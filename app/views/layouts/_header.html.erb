@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top"> 
+    
+  <div class="collapse navbar-collapse justify-content-center id="navbarNavAltMarkup">
+    <span class="navbar-brand">やんばるCODE</span> 
+    <div class="navbar-nav">       
+        <% if user_signed_in? %>
+            <%= link_to "Rails", "#", class: "nav-item nav-link active"%>
+            <%= link_to "Ruby/Rails教材", "#", class: "nav-item nav-link active"%>
+            <%= link_to "動画教材", "#", class: "nav-item nav-link active"%>
+            <%= link_to "AWS講座", "#", class: "nav-item nav-link active"%>   
+
+            <%= link_to "対談", "#", class: "nav-item nav-link active"  %>
+            <%= link_to "情報発信", "#", class: "nav-item nav-link active"%>
+            <%= link_to "動画編集講座", "#", class: "nav-item nav-link active"  %>
+            <%= link_to "ライティング講座", "#", class: "nav-item nav-link active"%>
+            <%= link_to "マネタイズ講座", "#", class: "nav-item nav-link active"  %>
+            <%= link_to "PHP", "#", class: "nav-item nav-link active"%>
+            <%= link_to "LINE", "#", class: "nav-item nav-link active"  %>
+            <%= link_to "アカウント編集", "#", class: "nav-item nav-link active"  %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-item nav-link active" %>
+        <% else %>
+            <%= link_to "ログイン", new_user_session_path, class: "nav-item nav-link active"%>
+            <%= link_to "新規登録", new_user_registration_path, class: "nav-item nav-link active"  %>
+        <% end %>
+    </div>
+  </div>
+</nav>
