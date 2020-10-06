@@ -13,3 +13,7 @@
 .alert-alert {
   @extend .alert-danger;
 }
+
+body {
+  margin-top: 60px;
+}

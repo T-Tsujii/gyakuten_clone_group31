@@ -1,27 +1,38 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top"> 
-    
+<span class="navbar-brand">やんばるCODE</span> 
   <div class="collapse navbar-collapse justify-content-center id="navbarNavAltMarkup">
-    <span class="navbar-brand">やんばるCODE</span> 
-    <div class="navbar-nav">       
+   
+    <ul class="navbar-nav">       
         <% if user_signed_in? %>
-            <%= link_to "Rails", "#", class: "nav-item nav-link active"%>
-            <%= link_to "Ruby/Rails教材", "#", class: "nav-item nav-link active"%>
-            <%= link_to "動画教材", "#", class: "nav-item nav-link active"%>
-            <%= link_to "AWS講座", "#", class: "nav-item nav-link active"%>   
-
-            <%= link_to "対談", "#", class: "nav-item nav-link active"  %>
-            <%= link_to "情報発信", "#", class: "nav-item nav-link active"%>
-            <%= link_to "動画編集講座", "#", class: "nav-item nav-link active"  %>
-            <%= link_to "ライティング講座", "#", class: "nav-item nav-link active"%>
-            <%= link_to "マネタイズ講座", "#", class: "nav-item nav-link active"  %>
-            <%= link_to "PHP", "#", class: "nav-item nav-link active"%>
-            <%= link_to "LINE", "#", class: "nav-item nav-link active"  %>
-            <%= link_to "アカウント編集", "#", class: "nav-item nav-link active"  %>
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-item nav-link active" %>
+          <div class="drop-down">
+              <li class="nav-item active dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rails</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class = "dropdown-item" href= "#">Ruby/Rails教材</a>
+                  <a class = "dropdown-item" href= "#">動画教材</a>
+                  <a class = "dropdown-item" href= "#">AWS講座</a>  
+                </div>
+              </li>
+          </div>
+          <li class="nav-item active"><a class="nav-link" href="#">対談</a></li>
+          <li class="nav-item active"><a class="nav-link" href="#">情報発信</a></li>
+          <li class="nav-item active"><a class="nav-link" href="#">動画編集講座</a></li>
+          <li class="nav-item active"><a class="nav-link" href="#">ライティング講座</a></li>
+          <li class="nav-item active"><a class="nav-link" href="#">マネタイズ講座</a></li>
+          <div class="drop-down">
+          <li class="nav-item active dropdown"><a class="nav-link dropdown-toggle" href= "#" id="dropdownMenuButton" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PHP</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class = "dropdown-item" href= "#">PHPテキスト教材</a>
+              <a class = "dropdown-item" href= "#">PHP動画教材</a>
+            </div>
+          </li>
+          </div>
+          <li class="nav-item active"><a class="nav-link" href="#">LINE</a></li>
+          <li><%= link_to "アカウント編集", "#", class: "nav-item nav-link active"  %></li>
+          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-item nav-link active" %></li>
         <% else %>
-            <%= link_to "ログイン", new_user_session_path, class: "nav-item nav-link active"%>
-            <%= link_to "新規登録", new_user_registration_path, class: "nav-item nav-link active"  %>
+          <li><%= link_to "ログイン", new_user_session_path, class: "nav-item nav-link active"%></li>
+          <li><%= link_to "新規登録", new_user_registration_path, class: "nav-item nav-link active"%></li>
         <% end %>
-    </div>
+    </ul>
   </div>
 </nav>
