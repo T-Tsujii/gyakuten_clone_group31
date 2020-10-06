@@ -4,6 +4,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
+  margin-top: 60px;
 }
 
 .alert-notice {
@@ -14,6 +15,8 @@
   @extend .alert-danger;
 }
 
-body {
-  margin-top: 60px;
+.navbar {
+  font-size: 0.8rem;
+  margin: 0 auto;
+  width: var(--breakpoint-lg);
 }
