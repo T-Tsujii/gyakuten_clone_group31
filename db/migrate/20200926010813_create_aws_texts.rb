@@ -1,8 +1,8 @@
 class CreateAwsTexts < ActiveRecord::Migration[6.0]
   def change
     create_table :aws_texts do |t|
-      t.string :title, null: false
-      t.text :content, null: false
+      change_column_null t.string :title, false
+      change_column_null t.text :content, false
 
       t.timestamps
     end
