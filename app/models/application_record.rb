@@ -1,5 +1,5 @@
 class ApplicationRecord < ActiveRecord::Base
   self.abstract_class = true
-  validates :title, presense: true
-  validates :content, presense: true
+  validates :title, presence: true
+  validates :content, presence: true
 end
