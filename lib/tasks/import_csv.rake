@@ -1,3 +1,5 @@
+require_relative "../import"
+
 namespace :import_csv do
 
   desc "CSVデータをインポートするタスク"
@@ -10,14 +12,14 @@ namespace :import_csv do
     begin
       AwsText.transaction do
       AwsText.create!(list)
-      end
-      puts "インポート完了!!".green
+    end
+      puts "インポート完了!!"
     rescue => e
-      puts "#{e.class}: #{e.message}".red
+      puts "#{e.class}: #{e.message}"
       puts "-------------------------"
       puts e.backtrace 
       puts "-------------------------"
-      puts "インポートに失敗".red
+      puts "インポートに失敗"
     end
   end
 end
