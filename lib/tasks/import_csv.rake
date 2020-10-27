@@ -5,7 +5,6 @@ namespace :import_csv do
   desc "CSVデータをインポートするタスク"
 
   task aws_texts: :environment do
-    require "import"
     list = Import.csv_data(path: "db/csv_data/aws_text_data.csv")
 
     puts "インポート処理を開始"
