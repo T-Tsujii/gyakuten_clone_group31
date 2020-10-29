@@ -2,7 +2,7 @@ require_relative "../import"
 
 namespace :import_csv do
 
-  desc "CSVデータをインポートするタスク"
+  desc "aws_textsへCSVデータをインポートするタスク"
 
   task aws_texts: :environment do
     list = Import.csv_data(path: "db/csv_data/aws_text_data.csv")
