@@ -1,17 +1,15 @@
-require 'csv'
+require_relative "../import"
 
 namespace :import_moviecsv do
     desc "CSVデータをmovieテーブルにインポートするタスク"
   task movies: :environment do
-    path = "db/csv_data/movie_data.csv"
-    list = []
-    
-    CSV.foreach(path, headers: true) do |row|
-      list << row.to_h
-    end    
-      puts "インポート処理を開始"
+    list = Import.csv_data(path: "db/csv_data/movie_data.csv")
+
+    puts "インポート処理を開始"
     begin
-      Movie.create!(list)
+      Movie.transaction do
+        Movie.create!(list)
+      end
       puts "インポート完了!!"
     rescue => e
       puts "#{e.class}: #{e.message}"
