@@ -21,7 +21,6 @@ namespace :import_csv do
     end
   end
 
-  namespace :import_csv do
     desc "CSVデータをmovieテーブルにインポートするタスク"
       task movies: :environment do
         list = Import.csv_data(path: "db/csv_data/movie_data.csv")
@@ -40,5 +39,4 @@ namespace :import_csv do
       puts "インポートに失敗"
     end
   end
-end
 end
