@@ -23,13 +23,13 @@ namespace :import_csv do
 
   desc "CSVデータをmovieテーブルにインポートするタスク"
 
-    task movies: :environment do
-      list = Import.csv_data(path: "db/csv_data/movie_data.csv")
-      puts "インポート処理を開始"
-      begin
-        Movie.transaction do
-          Movie.create!(list)
-        end 
+  task movies: :environment do
+    list = Import.csv_data(path: "db/csv_data/movie_data.csv")
+    puts "インポート処理を開始"
+    begin
+      Movie.transaction do
+        Movie.create!(list)
+      end 
       puts "インポート完了!!"
     rescue => e
       puts "#{e.class}: #{e.message}"
