@@ -20,3 +20,36 @@
   margin: 0 auto;
   width: var(--breakpoint-lg);
 }
+
+.container h2 {
+  margin-top: 5rem;
+  margin-bottom: 1.5rem;
+}
+
+.fa-search {
+  position: absolute;
+  top: 47%;
+  padding: 0 1em;  
+}
+
+.search-form {
+  width: 30%;
+}
+
+.form-control {
+  padding: 0 3em;
+}
+
+.card-container {
+  margin-bottom: 50px;
+}
+
+.card-btn {
+  width: 100%;
+}
+
+.text-title {
+  padding: 1em 0;
+}
+
+ 
