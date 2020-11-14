@@ -22,22 +22,22 @@
   width: var(--breakpoint-lg);
 }
 
-.container h2 {
+.wrapper h2 {
   margin-top: 5rem;
   margin-bottom: 1.5rem;
 }
 
-.fa-search {
+.fa_search {
   position: absolute;
-  top: 47%;
-  padding: 0 1em;  
+  top: 46%;
+  padding: 0 1em;
 }
 
 .search-form {
   width: 30%;
 }
 
-.form-control {
+.text-form-control {
   padding: 0 3em;
 }
 
@@ -50,7 +50,9 @@
 }
 
 .aws-title {
-  padding: 1em 0;
+  padding: 1em .5em;
+  white-space: nowrap;
+  overflow:scroll;
 }
 
  

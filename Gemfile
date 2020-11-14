@@ -17,7 +17,6 @@ gem 'rails-i18n'
 gem 'devise-i18n'
 
 gem 'devise-bootstrap-views'
-gem 'font-awesome-rails'
 gem 'font-awesome-sass'
 
 group :development, :test do
