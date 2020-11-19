@@ -1,4 +1,6 @@
 @import "bootstrap/scss/bootstrap";
+@import 'font-awesome-sprockets';
+@import "font-awesome";
 
 .base-container {
   max-width: 1200px;
@@ -20,3 +22,39 @@
   margin: 0 auto;
   width: var(--breakpoint-lg);
 }
+
+.wrapper h2 {
+  margin-top: 5rem;
+  margin-bottom: 1.5rem;
+}
+
+.fa_search {
+  position: absolute;
+  top: 20%;
+  padding: 0 1em;
+}
+
+.search-form {
+  width: 30%;
+  position: relative;
+}
+
+.text-form-control {
+  padding: 0 3em;
+}
+
+.card-container {
+  margin-bottom: 50px;
+}
+
+.card-btn {
+  width: 100%;
+}
+
+.aws-title {
+  padding: 1em .5em;
+  white-space: nowrap;
+  overflow:scroll;
+}
+
+ 

@@ -1,0 +1,27 @@
+<div class="wrapper">
+  <div class="text-box">
+    <h2 class="text-center">テキスト教材</h1>
+    <form class="mb-3 search-form mx-auto">
+    <div class="fa_search"><%= icon('fas', 'search') %></div>
+      <input type="text" class="form-control text-form-control" placeholder="教材を探す" aria-label="search" aria-describedby="basic-addon1">
+    </form>
+  </div>
+    <div class="row">
+      <% @aws_texts.each do |aws_text| %>
+        <div class="col-12 col-md-6 col-lg-4 card-container">
+        <div class ="card content-card border-dark mb-3">
+          <div class="card-header">
+            <svg class="bd-placeholder-img card-img-top" width=" 18rem" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap">
+            <title>Placeholder</title>
+            <rect fill="#868e96" width="100%" height="100%"/><text fill="#dee2e6" dy=".3em" x="50%" y="50%">Image cap</text></svg>
+          </div>
+            <div class="card-body">
+              <div class="btn btn-secondary card-btn">読破済みにする</div>   
+              <p class="text-title aws-title"><%= aws_text.title %></p>
+              <p>【AWS】
+            </div>
+        </div>
+        </div>
+      <% end %>
+    </div>
+</div>
